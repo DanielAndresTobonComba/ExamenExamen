@@ -4,31 +4,31 @@ create database sgpzf;
 use sgpzf;
 
 create table country (
-id int primary key ,
+id int primary key auto_increment ,
 name varchar(50) not null
 ) ;
 
 create table region (
-id int primary key ,
+id int primary key auto_increment ,
 name varchar(50) not null,
 idcountry int, 
 foreign key (idcountry) references country (id) 
 ) ;
 
 create table city (
-id int primary key ,
+id int primary key auto_increment ,
 name varchar(50) not null,
 idregion int, 
 foreign key (idregion) references region (id) 
 ) ;
 
 create table gender (
-id int primary key ,
+id int primary key auto_increment,
 name varchar(50) not null
 ) ;
 
 create table persons (
-id int primary key ,
+id int primary key auto_increment ,
 name varchar(50),
 lastname varchar(50),
 address varchar(50),
@@ -43,23 +43,23 @@ foreign key (idgender) references gender (id)
 
 
 create table stack (
-id int primary key ,
+id int primary key auto_increment ,
 name varchar(50) not null
 ) ;
 
 create table skill (
-id int primary key ,
+id int primary key auto_increment ,
 name varchar(50) not null
 ) ;
 
 
 create table persons_skill (
-id int primary key ,
+id int primary key auto_increment ,
 registration_date date,	
 idperson int,
 idskill int, 
-foreign key (idperson) references city (id) ,
-foreign key (idskill) references gender (id) 
+foreign key (idperson) references persons (id) ,
+foreign key (idskill) references skill (id) 
 ) ;
 
 create table stack_skill (
@@ -257,18 +257,40 @@ INSERT INTO sgpzf.city (id, name, idregion) VALUES (87, 'Fundación', 39);
 INSERT INTO sgpzf.city (id, name, idregion) VALUES (88, 'El Banco', 39);
 INSERT INTO sgpzf.city (id, name, idregion) VALUES (89, 'Plato', 39);
 
-create table persons (
-id int primary key auto_increment ,
-name varchar(50),
-lastname varchar(50),
-address varchar(50),
-age int,
-email varchar(100),
-idgender int,
-idcity int, 
-foreign key (idcity) references city (id) ,
-foreign key (idgender) references gender (id) 
-) ;
+
+
+
+-- PROCEDURES 
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS crearPersona $$
+CREATE PROCEDURE crearPersona
+    (IN in_nombre VARCHAR(50), 
+     IN in_apellido VARCHAR(50), 
+     IN in_edad INT, 
+     IN in_idCity INT, 
+     IN in_idGender INT, 
+     IN in_email VARCHAR(100), 
+     IN in_direccion VARCHAR(50))
+BEGIN
+    -- Declarar variables locales
+    DECLARE nuevoId INT;
+
+    -- Insertar el nuevo cliente en la tabla persons
+    INSERT INTO persons (name, lastname, age, idcity, idgender, email, address)
+    VALUES (in_nombre, in_apellido, in_edad, in_idCity, in_idGender, in_email, in_direccion);
+
+    -- Obtener el ID del cliente insertado
+    SELECT LAST_INSERT_ID() INTO nuevoId;
+
+    -- Seleccionar y retornar los detalles del cliente insertado
+    SELECT id, name, lastname, address, age, email, idgender, idcity 
+    FROM persons 
+    WHERE id = nuevoId;
+END $$
+
+DELIMITER ;
 
 -- PROCEDURES 
 
@@ -279,7 +301,47 @@ CREATE PROCEDURE consultarPersona
    (IN documento VARCHAR(15))
 BEGIN
         
-        SELECT name, lastname, address, numeroDocumento, age, email ,idgender,idcity  FROM persons WHERE id = documento;
+        SELECT id ,name, lastname, address, age, email ,idgender,idcity  FROM persons WHERE id = documento;
 END $$
 
 DELIMITER ;
+
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS eliminarPersona $$
+CREATE PROCEDURE eliminarPersona
+   (IN in_id int)
+BEGIN
+        
+       delete 
+       from persons 
+       where id = in_id;
+END $$
+
+DELIMITER ;
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS crearHabilidad $$
+CREATE PROCEDURE crearHabilidad
+    (IN in_nombre VARCHAR(50))
+BEGIN 
+    -- Declarar variables locales
+    DECLARE nuevoId INT;
+
+    -- Insertar el nuevo cliente en la tabla persons
+    INSERT INTO skill (name)
+    VALUES (in_nombre);
+
+    -- Obtener el ID del cliente insertado
+    SELECT LAST_INSERT_ID() INTO nuevoId;
+
+    -- Seleccionar y retornar los detalles del cliente insertado
+    SELECT id, name
+    FROM skill 
+    WHERE id = nuevoId;
+END $$
+
+DELIMITER ;
+

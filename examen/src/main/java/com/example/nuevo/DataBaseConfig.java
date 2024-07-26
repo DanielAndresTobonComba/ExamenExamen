@@ -21,8 +21,8 @@ public class DataBaseConfig {
         verifyConnection = false;
 
         String URL = "jdbc:mysql://localhost:3306/sgpzf";
-        String USER = "campus2023";
-        String PASSWORD = "campus2023";
+        String USER = "root";
+        String PASSWORD = "123456";
 
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              Statement statement = connection.createStatement()) {
