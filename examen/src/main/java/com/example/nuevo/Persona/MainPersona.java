@@ -7,8 +7,6 @@ import java.util.Scanner;
 import com.example.nuevo.CasesListController;
 import com.example.nuevo.Main;
 import com.example.nuevo.ClasesAbstractas.Funcionalidad;
-import com.example.nuevo.Utilidades.CheckInt;
-import com.example.nuevo.Utilidades.CheckString;
 
 public class MainPersona {
 

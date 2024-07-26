@@ -1,4 +1,4 @@
-package com.example.nuevo.Utilidades;
+package com.example.nuevo.Persona;
 
 import java.util.Scanner;
 

@@ -1,7 +1,7 @@
 package com.example.nuevo;
 
+import com.example.nuevo.Persona.CheckInt;
 import com.example.nuevo.Persona.MainPersona;
-import com.example.nuevo.Utilidades.CheckInt;
 
 public class Main {
     public static void main(String[] args) {

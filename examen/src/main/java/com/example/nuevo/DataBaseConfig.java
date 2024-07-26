@@ -20,7 +20,7 @@ public class DataBaseConfig {
         
         verifyConnection = false;
 
-        String URL = "jdbc:mysql://localhost:3306/mydb";
+        String URL = "jdbc:mysql://localhost:3306/sgpzf";
         String USER = "campus2023";
         String PASSWORD = "campus2023";
 

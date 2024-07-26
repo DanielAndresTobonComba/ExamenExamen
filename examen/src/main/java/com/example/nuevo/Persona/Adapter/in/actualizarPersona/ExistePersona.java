@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import com.example.nuevo.DataBaseConfig;
 import com.mysql.cj.jdbc.CallableStatement;
 
-public class ExisteCliente {
+public class ExistePersona {
 
     public boolean verificarCliente(String numeroDocumento) {
 
