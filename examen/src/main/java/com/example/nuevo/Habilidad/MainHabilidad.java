@@ -3,10 +3,10 @@ package com.example.nuevo.Habilidad;
 import java.util.List;
 import java.util.Scanner;
 
-import com.example.nuevo.CasesListController;
-import com.example.nuevo.Main;
 import com.example.nuevo.ClasesAbstractas.Funcionalidad;
-import com.example.nuevo.Persona.CheckInt;
+import com.example.nuevo.Main.CasesListController;
+import com.example.nuevo.Main.Main;
+import com.example.nuevo.Persona.Utilidades.CheckInt;
 
 public class MainHabilidad {
 

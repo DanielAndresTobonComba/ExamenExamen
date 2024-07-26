@@ -1,8 +1,8 @@
-package com.example.nuevo;
+package com.example.nuevo.Main;
 
 import com.example.nuevo.Habilidad.MainHabilidad;
-import com.example.nuevo.Persona.CheckInt;
 import com.example.nuevo.Persona.MainPersona;
+import com.example.nuevo.Persona.Utilidades.CheckInt;
 
 public class Main {
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ package com.example.nuevo.Habilidad.Application;
 import com.example.nuevo.ClasesAbstractas.Funcionalidad;
 import com.example.nuevo.Habilidad.Adapter.in.controladorCrearHabilidad;
 import com.example.nuevo.Habilidad.Adapter.out.repoCrearHabilidad;
-import com.example.nuevo.Habilidad.Domain.servicioCrearHabilidad;
+import com.example.nuevo.Habilidad.Domain.service.servicioCrearHabilidad;
 import com.example.nuevo.Persona.Adapter.in.actualizarPersona.controladorCrearPersona;
 import com.example.nuevo.Persona.Adapter.out.repoCrearPersona;
 import com.example.nuevo.Persona.Application.crearPersona;

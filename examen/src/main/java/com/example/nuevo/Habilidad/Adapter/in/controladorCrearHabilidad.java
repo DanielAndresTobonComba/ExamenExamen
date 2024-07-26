@@ -2,11 +2,11 @@ package com.example.nuevo.Habilidad.Adapter.in;
 
 import com.example.nuevo.Habilidad.Adapter.out.repoCrearHabilidad;
 import com.example.nuevo.Habilidad.Application.crearHabilidad;
-import com.example.nuevo.Habilidad.Domain.habilidad;
-import com.example.nuevo.Persona.CheckInt;
-import com.example.nuevo.Persona.CheckString;
+import com.example.nuevo.Habilidad.Domain.entity.habilidad;
 import com.example.nuevo.Persona.Adapter.out.repoEliminarPersona;
 import com.example.nuevo.Persona.Application.eliminarPersona;
+import com.example.nuevo.Persona.Utilidades.CheckInt;
+import com.example.nuevo.Persona.Utilidades.CheckString;
 
 public class controladorCrearHabilidad {
 

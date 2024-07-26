@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.example.nuevo.DataBaseConfig;
+import com.example.nuevo.Main.DataBaseConfig;
 import com.mysql.cj.jdbc.CallableStatement;
 
 public class ExistePersona {

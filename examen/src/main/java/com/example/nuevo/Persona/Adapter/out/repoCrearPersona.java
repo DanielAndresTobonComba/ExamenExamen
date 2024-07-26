@@ -5,12 +5,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLIntegrityConstraintViolationException;
 
-import com.example.nuevo.DataBaseConfig;
+import com.example.nuevo.Main.DataBaseConfig;
 import com.example.nuevo.Persona.MainPersona;
-import com.example.nuevo.Persona.imprimirDatosPersona;
-
 import com.example.nuevo.Persona.Domain.entity.Persona;
 import com.example.nuevo.Persona.Domain.service.servicioCrearPersona;
+import com.example.nuevo.Persona.Utilidades.imprimirDatosPersona;
 
 public class repoCrearPersona implements servicioCrearPersona {
 

@@ -1,4 +1,4 @@
-package com.example.nuevo.Habilidad.Domain;
+package com.example.nuevo.Habilidad.Domain.entity;
 
 public class habilidad {
 

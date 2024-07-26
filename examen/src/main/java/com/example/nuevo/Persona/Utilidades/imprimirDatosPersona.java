@@ -1,4 +1,4 @@
-package com.example.nuevo.Persona;
+package com.example.nuevo.Persona.Utilidades;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

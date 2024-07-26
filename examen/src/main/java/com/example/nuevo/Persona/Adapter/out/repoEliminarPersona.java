@@ -7,10 +7,10 @@ import java.sql.SQLException;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.util.Scanner;
 
-import com.example.nuevo.DataBaseConfig;
+import com.example.nuevo.Main.DataBaseConfig;
 import com.example.nuevo.Persona.MainPersona;
-import com.example.nuevo.Persona.imprimirDatosPersona;
 import com.example.nuevo.Persona.Domain.service.servicioEliminarPersona;
+import com.example.nuevo.Persona.Utilidades.imprimirDatosPersona;
 
 public class repoEliminarPersona implements servicioEliminarPersona {
 

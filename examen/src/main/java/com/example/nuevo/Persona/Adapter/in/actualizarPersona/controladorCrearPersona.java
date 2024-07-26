@@ -1,10 +1,10 @@
 package com.example.nuevo.Persona.Adapter.in.actualizarPersona;
 
-import com.example.nuevo.Persona.CheckInt;
-import com.example.nuevo.Persona.CheckString;
 import com.example.nuevo.Persona.Adapter.out.repoCrearPersona;
 import com.example.nuevo.Persona.Application.crearPersona;
 import com.example.nuevo.Persona.Domain.entity.Persona;
+import com.example.nuevo.Persona.Utilidades.CheckInt;
+import com.example.nuevo.Persona.Utilidades.CheckString;
 
 public class controladorCrearPersona {
 

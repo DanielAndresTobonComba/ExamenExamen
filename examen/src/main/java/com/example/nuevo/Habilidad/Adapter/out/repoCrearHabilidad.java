@@ -5,13 +5,13 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLIntegrityConstraintViolationException;
 
-import com.example.nuevo.DataBaseConfig;
 import com.example.nuevo.Habilidad.MainHabilidad;
-import com.example.nuevo.Habilidad.imprimirHabilidad;
-import com.example.nuevo.Habilidad.Domain.habilidad;
-import com.example.nuevo.Habilidad.Domain.servicioCrearHabilidad;
+import com.example.nuevo.Habilidad.Domain.entity.habilidad;
+import com.example.nuevo.Habilidad.Domain.service.servicioCrearHabilidad;
+import com.example.nuevo.Habilidad.Utilidades.imprimirHabilidad;
+import com.example.nuevo.Main.DataBaseConfig;
 import com.example.nuevo.Persona.MainPersona;
-import com.example.nuevo.Persona.imprimirDatosPersona;
+import com.example.nuevo.Persona.Utilidades.imprimirDatosPersona;
 
 public class repoCrearHabilidad implements servicioCrearHabilidad {
 

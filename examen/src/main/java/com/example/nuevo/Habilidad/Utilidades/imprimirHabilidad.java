@@ -1,4 +1,4 @@
-package com.example.nuevo.Habilidad;
+package com.example.nuevo.Habilidad.Utilidades;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

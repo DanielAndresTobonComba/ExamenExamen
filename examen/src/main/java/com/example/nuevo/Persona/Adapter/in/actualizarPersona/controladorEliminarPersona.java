@@ -1,9 +1,9 @@
 package com.example.nuevo.Persona.Adapter.in.actualizarPersona;
 
-import com.example.nuevo.Persona.CheckInt;
 import com.example.nuevo.Persona.Adapter.out.repoEliminarPersona;
 import com.example.nuevo.Persona.Application.crearPersona;
 import com.example.nuevo.Persona.Application.eliminarPersona;
+import com.example.nuevo.Persona.Utilidades.CheckInt;
 
 public class controladorEliminarPersona {
 
