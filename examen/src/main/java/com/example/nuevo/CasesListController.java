@@ -37,8 +37,8 @@ public class CasesListController {
 
 
         Funcionalidad crearPersona = new crearPersona("Crear persona"); 
-        Funcionalidad eliminarPersona = new eliminarPersona("Crear persona"); 
-        Funcionalidad actualizarPersona = new actualizarPersona("Crear persona"); 
+        Funcionalidad eliminarPersona = new eliminarPersona("Eliminar persona"); 
+        Funcionalidad actualizarPersona = new actualizarPersona("Actualizar persona"); 
 
         lstFUncionesPersona.add(crearPersona); 
         lstFUncionesPersona.add(actualizarPersona); 
