@@ -1,5 +1,6 @@
 package com.example.nuevo;
 
+import com.example.nuevo.Habilidad.MainHabilidad;
 import com.example.nuevo.Persona.CheckInt;
 import com.example.nuevo.Persona.MainPersona;
 
@@ -25,6 +26,7 @@ public class Main {
                 System.out.println("MENU PRINCIPAL");
 
                 System.out.println("1. Gestion Persona ");
+                System.out.println("2. Gestion Habilidades");
 
 
                 System.out.print("Opcion >>>> ");
@@ -38,7 +40,7 @@ public class Main {
                         break;
                     
                     case 2:
-                        
+                        MainHabilidad.main();
                         break;
 
                     case 3:

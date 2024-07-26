@@ -55,10 +55,19 @@ public class repoEliminarPersona implements servicioEliminarPersona {
             stmtEliminar = connection.prepareCall(sqlEliminar);
             stmtEliminar.setInt(1, id);
 
+
+
             System.out.println("Eliminando persona con la id " + id + "...");
             stmtEliminar.execute();
-            System.out.println("Pesona eliminada con éxito.");
-            MainPersona.main();
+
+            if (!hasResult) {
+                System.out.println("Pesona eliminada con éxito.");
+                MainPersona.main();  
+            }else {
+                System.out.println("Proceso finalizado");
+            }
+
+            
 
 
             

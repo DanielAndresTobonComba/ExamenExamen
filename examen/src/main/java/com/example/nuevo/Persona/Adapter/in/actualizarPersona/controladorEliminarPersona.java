@@ -14,9 +14,6 @@ public class controladorEliminarPersona {
     }
 
 
-
-
-
     public void tomarDatos () {
 
         System.out.println("Digite el id de la persona");

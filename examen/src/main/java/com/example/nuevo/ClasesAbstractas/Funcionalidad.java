@@ -4,6 +4,6 @@ public abstract  class Funcionalidad {
 
     public String enunciado;
 
-    public  abstract void ejecutar();
+    public abstract void ejecutar();
 
 }
